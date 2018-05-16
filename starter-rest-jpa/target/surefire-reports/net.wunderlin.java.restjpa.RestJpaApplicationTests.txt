@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: net.wunderlin.java.restjpa.RestJpaApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.691 s <<< FAILURE! - in net.wunderlin.java.restjpa.RestJpaApplicationTests
+initializationError(net.wunderlin.java.restjpa.RestJpaApplicationTests)  Time elapsed: 0.008 s  <<< ERROR!
+java.lang.IllegalStateException: Found multiple @SpringBootConfiguration annotated classes [Generic bean: class [net.wunderlin.java.restjpa.Application]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [/Users/wus/Projects/spring-boot/starter-rest-jpa/target/classes/net/wunderlin/java/restjpa/Application.class], Generic bean: class [net.wunderlin.java.restjpa.RestJpaApplication]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [/Users/wus/Projects/spring-boot/starter-rest-jpa/target/classes/net/wunderlin/java/restjpa/RestJpaApplication.class]]
+
