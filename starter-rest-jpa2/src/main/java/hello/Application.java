@@ -8,5 +8,11 @@ public class Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
+		
+		//Node.getById
+		
+		Node n1 = new Node();
+		n1.setName("Child 1");
+		//n1.setParent(1);
 	}
 }
