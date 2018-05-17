@@ -20,8 +20,8 @@ public class Node {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-	private String name;
-	private String description;
+	public String name;
+	public String description;
 	
 	@ManyToOne
 	@JoinColumn(name = "parent_id")
@@ -65,22 +65,6 @@ public class Node {
 
 	public void setChildren(Set<Node> children) {
 		this.children = children;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
 	}
 
 	@Override

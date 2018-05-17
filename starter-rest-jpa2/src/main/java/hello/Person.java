@@ -14,10 +14,10 @@ public class Person {
 	private long id;
 
 	@Column(name="firstname")
-	private String firstName;
+	public String firstName;
 	
 	@Column(name="lastname")
-	private String lastName;
+	public String lastName;
 	
 	public Person() {}
 	
@@ -25,20 +25,5 @@ public class Person {
 		this.lastName = n;
 		this.firstName = f;
 	}
-	
-	public String getFirstName() {
-		return firstName;
-	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
 }
