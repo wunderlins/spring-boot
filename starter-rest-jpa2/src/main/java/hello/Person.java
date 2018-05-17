@@ -18,6 +18,13 @@ public class Person {
 	
 	@Column(name="lastname")
 	private String lastName;
+	
+	public Person() {}
+	
+	public Person(String n, String f) {
+		this.lastName = n;
+		this.firstName = f;
+	}
 
 	public String getFirstName() {
 		return firstName;

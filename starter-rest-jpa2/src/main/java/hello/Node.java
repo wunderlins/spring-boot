@@ -10,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
@@ -29,16 +30,27 @@ public class Node {
 	@OneToMany(mappedBy = "parent", cascade = CascadeType.REMOVE, orphanRemoval = true)
 	private Set<Node> children;
 	
+	@ManyToMany
+	private Set<Person> responsible;
+	
 	public long getId() {
 		return id;
 	}
 	
 	public boolean isRoot() {
-		if (id == 1)
+		if (id == 0)
 			return true;
 		return false;
 	}
 	
+	public Set<Person> getResponsible() {
+		return responsible;
+	}
+
+	public void setResponsible(Set<Person> responsible) {
+		this.responsible = responsible;
+	}
+
 	public Node getParent() {
 		return parent;
 	}

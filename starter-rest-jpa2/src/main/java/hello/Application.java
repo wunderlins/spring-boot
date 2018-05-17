@@ -15,15 +15,5 @@ public class Application {
 	
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
-		
-		//Node root = new Node();
-		
-		
-		//Node.getById
-		
-		Node n1 = new Node();
-		n1.setName("Child 1");
-		
-		//n1.setParent(1);
 	}
 }
