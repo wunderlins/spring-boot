@@ -2,10 +2,14 @@ package hello;
 
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.IOException;
+import java.net.URI;
 import java.util.Optional;
 import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -31,11 +35,21 @@ public class HelloController {
     public String index() {
     	String html = "";
     	
+    	Resource resource = new ClassPathResource("/");
+        URI uri = null;
+		try {
+			uri = resource.getURI();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        System.out.println(uri);
+    	
     	Optional<Node> rootn = this.nodeRepository.findById(0L);
     	Node root = rootn.get();
         html = root.getName() + " " + root.isRoot();
     	
- s       /*
+        /*
         Set<Node> children = root.getChildren();
         for(Node c: children) {
         	html += "<br>" + c.getName() + " " + c.getId();

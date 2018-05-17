@@ -25,7 +25,7 @@ public class Person {
 		this.lastName = n;
 		this.firstName = f;
 	}
-
+	
 	public String getFirstName() {
 		return firstName;
 	}
