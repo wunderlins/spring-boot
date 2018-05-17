@@ -47,7 +47,7 @@ public class HelloController {
     	
     	Optional<Node> rootn = this.nodeRepository.findById(0L);
     	Node root = rootn.get();
-        html = root.getName() + " " + root.isRoot();
+        html = root.name + " " + root.isRoot();
     	
         /*
         Set<Node> children = root.getChildren();
