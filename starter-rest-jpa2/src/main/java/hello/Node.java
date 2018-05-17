@@ -29,6 +29,16 @@ public class Node {
 	@OneToMany(mappedBy = "parent", cascade = CascadeType.REMOVE, orphanRemoval = true)
 	private Set<Node> children;
 	
+	public long getId() {
+		return id;
+	}
+	
+	public boolean isRoot() {
+		if (id == 1)
+			return true;
+		return false;
+	}
+	
 	public Node getParent() {
 		return parent;
 	}
@@ -59,6 +69,12 @@ public class Node {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	@Override
+	public String toString() {
+		return "Node [id=" + id + ", name=" + name + ", description=" + description + ", parent=" + parent
+				+ ", children=" + children + "]";
 	}
 
 
