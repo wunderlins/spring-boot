@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
+Built-By: wus
+Build-Jdk: 10.0.1
 Implementation-Title: gs-accessing-data-rest
 Implementation-Version: 0.1.0
-Built-By: wus
 Implementation-Vendor-Id: org.springframework
-Build-Jdk: 1.8.0_171
 Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
  ot-starter-parent/gs-accessing-data-rest
 Created-By: Maven Integration for Eclipse
